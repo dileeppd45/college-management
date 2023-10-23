@@ -1,0 +1,33 @@
+
+{% extends 'teacher_header.html' %}
+{% block content %}
+
+<br>
+<br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h3>Viewing Feedbacks</h3>
+
+  </div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Roll Number</th>
+        <th>Name</th>
+        <th >Feedbacks</th>
+        <th >Posted On</th>
+    </tr>
+{% for data in data %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.1}} </td>
+        <td> {{data.4}} </td>
+        <td> {{data.2}} </td>
+        <td> {{data.3}} </td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+
+{% endblock %}

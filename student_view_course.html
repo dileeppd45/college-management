@@ -1,0 +1,39 @@
+{% extends 'student_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush; "><a href="../stud_view_department" >Back</a></div>
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Viewing Course</h1>
+
+  </div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Course</th>
+        <th >Subject</th>
+        <th >University Notification</th>
+        <th >Time Table</th>
+        <th>Attendance</th>
+        <th>Internal Marks</th>
+        <th colspan="2">Fees Details</th>
+    </tr>
+
+    <tr>
+
+        <td> {{cdata.2}} </td>
+
+        <td><a href="../stud_view_subject/{{cdata.0}}">View Sub</a></td>
+        <td><a href="../stud_view_notification/{{cdata.0}}">View</a></td>
+        <td><a href="../stud_view_timetable/{{cdata.0}}">View</a> </td>
+        <td><a href="../stud_view_attendance/{{cdata.0}}" >View</a></td>
+        <td><a href="../stud_view_internals/{{cdata.0}}">View</a></td>
+        <td><a href ="../stud_add_fees/{{cdata.0}}"> Add fees</a></td>
+        <td><a href="../stud_view_fees/{{cdata.0}}">View</a></td>
+
+    </tr>
+</table>
+</div>
+{% endblock %}

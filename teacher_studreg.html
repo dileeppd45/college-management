@@ -1,0 +1,81 @@
+{% extends 'teacher_header.html' %}
+{% block content %}
+<br>
+<br>
+<style type="text/css">
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password],input[type=number] {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.center{
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+}
+</style>
+</head>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush; "><a href="../staff_view_course/{{did}}" >Back</a></div>
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Student Registration</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<div>
+  <form action="../signup" method="post">
+      {% csrf_token %}
+  <div class="center">
+    <table>
+      <tr><label   style="float:left; padding-left:15px;"><b>Register Number :</b></label></tr><br>
+      <tr><input type="text" id="name" name="rname" placeholder="Register Number" required style="opacity:0.6; width:250px; height:45px; "></tr><br>
+      <tr><label   style="float:left; padding-left:15px;"><b>Student Name :</b></label></tr>
+      <tr><input type="text" id="name" name="name" placeholder="Enter Student Name" required style="opacity:0.6; width:250px; height:45px; "></tr>
+
+      <tr><label  style="float:left; padding-left:15px;"><b>Email :</b></label></tr>
+      <tr><input type="text" id="email" name="email" placeholder="Email." required style="opacity:0.6; width:250px; height:45px; "></tr>
+
+        <input type="hidden"  name="course" value="{{id}}" >
+      </tr><br><br>
+      <tr><label   style="float:left; padding-left:15px;"><b>Semester :</b></label></tr><br>
+      <tr>
+        <select  name="txtsemester"  required  style="opacity:0.6; width:250px; height:45px; ">
+          <option value="" selected>Select Semester</option>
+          <option value="1" >1</option>
+          <option value="2">2</option>
+          <option value="3" >3</option>
+          <option value="4">4</option>
+          <option value="5" >5</option>
+          <option value="6">6</option>
+          <option value="7" >7</option>
+          <option value="8">8</option>
+        </select>
+        </tr><br>
+      <tr><label   style="float:left; padding-left:15px;"><b>Address :</b></label></tr><br>
+      <tr><input type="text" id="address" name="address" placeholder="Address" required style="opacity:0.6; width:250px; height:45px; "></tr>
+
+      <tr><label   style="float:left; padding-left:15px;"><b>Pincode :</b></label></tr>
+      <tr><input type="number" id="pincode" name="pincode" placeholder="Pincode." required style="opacity:0.6; width:250px; height:45px; "></tr>
+
+      <tr><label   style="float:left; padding-left:15px;"><b>Contact Number :</b></label></tr>
+      <tr><input type="number" id="phone" name="phone" placeholder="Phone Number" required style="opacity:0.6; width:250px; height:45px; "></tr>
+
+      <tr><label   style="float:left; padding-left:15px;"><b>Password :</b></label></tr>
+      <tr><input type="text" id="password" name="password" placeholder="password."required style="opacity:0.6; width:250px; height:45px; "></tr>
+
+      <tr><button type="submit" class="btn btn-info">Signin</button></tr>
+    </table>
+  </div>
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

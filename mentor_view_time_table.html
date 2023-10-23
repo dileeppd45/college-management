@@ -1,0 +1,480 @@
+{% extends 'mentor_header.html' %}
+{% block content %}
+
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush; "><a href="../mentor_view_course/{{did}}" >Back</a></div>
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Course Wise Timetable</h1>
+
+  </div>
+  <br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 1</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style=" color: lavenderblush;">
+    <tr style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{sem11.0}}</th>
+      <th>{{sem11.2}}</th>
+      <th>{{sem11.4}}</th>
+      <th>{{sem11.6}}</th>
+      <th>{{sem11.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{sem12.0}}</th>
+      <th>{{sem12.2}}</th>
+      <th>{{sem12.4}}</th>
+      <th>{{sem12.6}}</th>
+      <th>{{sem12.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Wednesday</th>
+      <th>{{sem13.0}}</th>
+      <th>{{sem13.2}}</th>
+      <th>{{sem13.4}}</th>
+      <th>{{sem13.6}}</th>
+      <th>{{sem13.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{sem14.0}}</th>
+      <th>{{sem14.2}}</th>
+      <th>{{sem14.4}}</th>
+      <th>{{sem14.6}}</th>
+      <th>{{sem14.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{sem15.0}}</th>
+      <th>{{sem15.2}}</th>
+      <th>{{sem15.4}}</th>
+      <th>{{sem15.6}}</th>
+      <th>{{sem15.8}}</th>
+    </tr>
+
+  </table>
+</div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 2</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style="color: lavenderblush;">
+    <tr style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{sem21.0}}</th>
+      <th>{{sem21.2}}</th>
+      <th>{{sem21.4}}</th>
+      <th>{{sem21.6}}</th>
+      <th>{{sem21.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{sem22.0}}</th>
+      <th>{{sem22.2}}</th>
+      <th>{{sem22.4}}</th>
+      <th>{{sem22.6}}</th>
+      <th>{{sem22.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Wednesday</th>
+      <th>{{sem23.0}}</th>
+      <th>{{sem23.2}}</th>
+      <th>{{sem23.4}}</th>
+      <th>{{sem23.6}}</th>
+      <th>{{sem23.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{sem24.0}}</th>
+      <th>{{sem24.2}}</th>
+      <th>{{sem24.4}}</th>
+      <th>{{sem24.6}}</th>
+      <th>{{sem24.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{sem25.0}}</th>
+      <th>{{sem25.2}}</th>
+      <th>{{sem25.4}}</th>
+      <th>{{sem25.6}}</th>
+      <th>{{sem25.8}}</th>
+    </tr>
+
+  </table>
+</div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 3</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style="color: lavenderblush;">
+    <tr style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{sem31.0}}</th>
+      <th>{{sem31.2}}</th>
+      <th>{{sem31.4}}</th>
+      <th>{{sem31.6}}</th>
+      <th>{{sem31.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{sem32.0}}</th>
+      <th>{{sem32.2}}</th>
+      <th>{{sem32.4}}</th>
+      <th>{{sem32.6}}</th>
+      <th>{{sem32.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Wednesday</th>
+      <th>{{sem33.0}}</th>
+      <th>{{sem33.2}}</th>
+      <th>{{sem33.4}}</th>
+      <th>{{sem33.6}}</th>
+      <th>{{sem33.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{sem34.0}}</th>
+      <th>{{sem34.2}}</th>
+      <th>{{sem34.4}}</th>
+      <th>{{sem34.6}}</th>
+      <th>{{sem34.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{sem35.0}}</th>
+      <th>{{sem35.2}}</th>
+      <th>{{sem35.4}}</th>
+      <th>{{sem35.6}}</th>
+      <th>{{sem35.8}}</th>
+    </tr>
+
+  </table>
+</div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 4</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style="color: lavenderblush;">
+    <tr style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{sem41.0}}</th>
+      <th>{{sem41.2}}</th>
+      <th>{{sem41.4}}</th>
+      <th>{{sem41.6}}</th>
+      <th>{{sem41.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{sem42.0}}</th>
+      <th>{{sem42.2}}</th>
+      <th>{{sem42.4}}</th>
+      <th>{{sem42.6}}</th>
+      <th>{{sem42.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Wednesday</th>
+      <th>{{sem43.0}}</th>
+      <th>{{sem43.2}}</th>
+      <th>{{sem43.4}}</th>
+      <th>{{sem43.6}}</th>
+      <th>{{sem43.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{sem44.0}}</th>
+      <th>{{sem44.2}}</th>
+      <th>{{sem44.4}}</th>
+      <th>{{sem44.6}}</th>
+      <th>{{sem44.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{sem45.0}}</th>
+      <th>{{sem45.2}}</th>
+      <th>{{sem45.4}}</th>
+      <th>{{sem45.6}}</th>
+      <th>{{sem45.8}}</th>
+    </tr>
+
+  </table>
+</div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 5</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style="color: lavenderblush;">
+    <tr style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{sem51.0}}</th>
+      <th>{{sem51.2}}</th>
+      <th>{{sem51.4}}</th>
+      <th>{{sem51.6}}</th>
+      <th>{{sem51.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{sem52.0}}</th>
+      <th>{{sem52.2}}</th>
+      <th>{{sem52.4}}</th>
+      <th>{{sem52.6}}</th>
+      <th>{{sem52.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Wednesday</th>
+      <th>{{sem53.0}}</th>
+      <th>{{sem53.2}}</th>
+      <th>{{sem53.4}}</th>
+      <th>{{sem53.6}}</th>
+      <th>{{sem53.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{sem54.0}}</th>
+      <th>{{sem54.2}}</th>
+      <th>{{sem54.4}}</th>
+      <th>{{sem54.6}}</th>
+      <th>{{sem54.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{sem55.0}}</th>
+      <th>{{sem55.2}}</th>
+      <th>{{sem55.4}}</th>
+      <th>{{sem55.6}}</th>
+      <th>{{sem55.8}}</th>
+    </tr>
+
+  </table>
+</div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 6</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style="color: lavenderblush;">
+    <tr style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{sem61.0}}</th>
+      <th>{{sem61.2}}</th>
+      <th>{{sem61.4}}</th>
+      <th>{{sem61.6}}</th>
+      <th>{{sem61.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{sem62.0}}</th>
+      <th>{{sem62.2}}</th>
+      <th>{{sem62.4}}</th>
+      <th>{{sem62.6}}</th>
+      <th>{{sem62.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Wednesday</th>
+      <th>{{sem63.0}}</th>
+      <th>{{sem63.2}}</th>
+      <th>{{sem63.4}}</th>
+      <th>{{sem63.6}}</th>
+      <th>{{sem63.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{sem64.0}}</th>
+      <th>{{sem64.2}}</th>
+      <th>{{sem64.4}}</th>
+      <th>{{sem64.6}}</th>
+      <th>{{sem64.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{sem65.0}}</th>
+      <th>{{sem65.2}}</th>
+      <th>{{sem65.4}}</th>
+      <th>{{sem65.6}}</th>
+      <th>{{sem65.8}}</th>
+    </tr>
+
+  </table>
+</div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 7</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style="color: lavenderblush;">
+    <tr style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{sem71.0}}</th>
+      <th>{{sem71.2}}</th>
+      <th>{{sem71.4}}</th>
+      <th>{{sem71.6}}</th>
+      <th>{{sem71.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{sem72.0}}</th>
+      <th>{{sem72.2}}</th>
+      <th>{{sem72.4}}</th>
+      <th>{{sem72.6}}</th>
+      <th>{{sem72.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Wednesday</th>
+      <th>{{sem73.0}}</th>
+      <th>{{sem73.2}}</th>
+      <th>{{sem73.4}}</th>
+      <th>{{sem73.6}}</th>
+      <th>{{sem73.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{sem74.0}}</th>
+      <th>{{sem74.2}}</th>
+      <th>{{sem74.4}}</th>
+      <th>{{sem74.6}}</th>
+      <th>{{sem74.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{sem75.0}}</th>
+      <th>{{sem75.2}}</th>
+      <th>{{sem75.4}}</th>
+      <th>{{sem75.6}}</th>
+      <th>{{sem75.8}}</th>
+    </tr>
+
+  </table>
+</div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 8</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style="color: lavenderblush;">
+    <tr style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{sem81.0}}</th>
+      <th>{{sem81.2}}</th>
+      <th>{{sem81.4}}</th>
+      <th>{{sem81.6}}</th>
+      <th>{{sem81.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{sem82.0}}</th>
+      <th>{{sem82.2}}</th>
+      <th>{{sem82.4}}</th>
+      <th>{{sem82.6}}</th>
+      <th>{{sem82.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Wednesday</th>
+      <th>{{sem83.0}}</th>
+      <th>{{sem83.2}}</th>
+      <th>{{sem83.4}}</th>
+      <th>{{sem83.6}}</th>
+      <th>{{sem83.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{sem84.0}}</th>
+      <th>{{sem84.2}}</th>
+      <th>{{sem84.4}}</th>
+      <th>{{sem84.6}}</th>
+      <th>{{sem84.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{sem85.0}}</th>
+      <th>{{sem85.2}}</th>
+      <th>{{sem85.4}}</th>
+      <th>{{sem85.6}}</th>
+      <th>{{sem85.8}}</th>
+    </tr>
+
+  </table>
+</div>
+
+{% endblock %}

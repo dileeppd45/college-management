@@ -1,0 +1,31 @@
+{% extends 'student_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Send Feedback</h1>
+
+  </div>
+  <br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table class="table" style="color: lavenderblush;">
+        <tr><th colspan="2"><h3>Feedback Form</h3></th></tr>
+
+        <form action="../sendfb" method="post">
+            {% csrf_token %}
+        <tr>
+            <th>Add Your Feedback :</th>
+            <td><textarea id="description" name="fbdetails" style="height:200px; opacity:0.6; " required style=""></textarea></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td ><input type="submit" value="Send" class="btn btn-success" ></td>
+        </tr>
+
+        </form>
+
+    </table>
+</div>
+{% endblock %}

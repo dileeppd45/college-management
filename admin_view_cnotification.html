@@ -1,0 +1,21 @@
+
+{% extends 'admin_header.html' %}
+{% block content %}
+
+
+<br>
+<div class=" col p-2 container " style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1 style="color:white;">College Notification</h1>
+
+  </div>
+  <br>
+
+
+{% for data in cdata %}
+<div class="col p-5  container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <p style="float:right;">{{data.2}}</p>
+    <p>{{data.1}}</p>
+  </div>
+{% endfor %}
+
+{% endblock %}

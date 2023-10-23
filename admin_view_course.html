@@ -1,0 +1,41 @@
+
+{% extends 'admin_header.html' %}
+{% block content %}
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1 style="color:white;">Viewing Course</h1>
+
+  </div>
+<div class=" container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Course</th>
+        <th >Subject</th>
+        <th>Semester</th>
+        <th colspan="2">University Notification</th>
+        <th >Time Table</th>
+        <th colspan="2">Edit</th>
+    </tr>
+{% for data in cdata %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.2}} </td>
+
+
+      <td><a href="../reg_subject/{{data.0}}">Add Sub</a></td>
+        <td><a href="../admin_view_semester/{{data.0}}">View</a></td>
+        <td><a href="../view_notification/{{data.0}}">View</a></td>
+      <td><a href="../upload_notification/{{data.0}}">Add</a></td>
+        <td><a href="../view_timetable/{{data.0}}">View</a> </td>
+
+      <td> <a href="#">Edit</a></td><!--../edit_subject/{{data.0}}-->
+      <td> <a href="#">Remove</a></td><!--../delete_subject/{{data.0}}-->
+
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

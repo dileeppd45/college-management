@@ -1,0 +1,35 @@
+
+{% extends 'mentor_header.html' %}
+{% block content %}
+
+<br>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;"><a href="../mentor_view_department" >Back</a></div>
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h3>Viewing Course</h3>
+
+  </div>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Course</th>
+        <th >Semester</th>
+        <th >University Notification</th>
+        <th>Time Table</th>
+    </tr>
+{% for data in cdata %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.2}} </td>
+      <td><a href="../mentor_view_semester/{{data.0}}">View </a></td>
+        <td><a href="../mentor_view_notification/{{data.0}}">View</a></td>
+        <td><a href="../mentor_view_timetable/{{data.0}}">View</a> </td>
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

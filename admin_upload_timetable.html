@@ -1,0 +1,96 @@
+
+{% extends 'admin_header1.html' %}
+{% block content %}
+
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1 style="color:white;">Add Time Table</h1>
+    </div><br>
+<div class=" container" style="background-color: #5bd9cc; color: lavenderblush;">
+
+    <table class="table">
+        <form action="../../add_timetable/{{id}}" method="post">
+    {% csrf_token %}
+
+      <tr>
+        <th>SEMESTER :</th>
+        <td><input type="text" value="{{sem}}" name="semester" readonly style="opacity:0.6; width:250px; height:35px; "> </td>
+
+      <tr>
+       <th>Select Day :</th>
+       <td>
+        <select  name="day"  required  style="opacity:0.6; width:250px; height:35px; ">
+          <option value="" selected>Select Day</option>
+          <option value="monday" >Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday" >Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday" >Friday</option>
+        </select>
+        </td>
+      </tr>
+        <tr>
+            <th>Period 1 :</th>
+            <td>
+                <select name="period1" required style="opacity:0.6; width:250px; height:35px;">
+                    <option value="" selected>Select Subject</option>
+                    {% for data in adata %}
+                    <option value="{{data.0}}">{{data.3}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Period 2 :</th>
+            <td>
+                <select name="period2" required style="opacity:0.6; width:250px; height:35px;">
+                    <option value="" selected>Select Subject</option>
+                    {% for data in bdata %}
+                    <option value="{{data.0}}">{{data.3}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Period 3 :</th>
+            <td>
+                <select name="period3" required style="opacity:0.6; width:250px; height:35px;">
+                    <option value="" selected>Select Subject</option>
+                    {% for data in cdata %}
+                    <option value="{{data.0}}">{{data.3}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Period 4 :</th>
+            <td>
+                <select name="period4" required style="opacity:0.6; width:250px; height:35px;">
+                    <option value="" selected>Select Subject</option>
+                    {% for data in ddata %}
+                    <option value="{{data.0}}">{{data.3}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Period 5 :</th>
+            <td>
+                <select name="period5" required style="opacity:0.6; width:250px; height:35px;">
+                    <option value="" selected>Select Subject</option>
+                    {% for data in edata %}
+                    <option value="{{data.0}}">{{data.3}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="submit" value="Add" class=" bg-info "></td>
+        </tr>
+             </form>
+        </table>
+
+</div>
+
+{% endblock %}

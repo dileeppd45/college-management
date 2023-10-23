@@ -1,0 +1,351 @@
+
+{% extends 'mentor_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush; "><a href="../mentor_view_course/{{did}}" >Back</a></div>
+
+<br>
+<div class=" col p-2 container"  style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Viewing Semester Wise Students And Subjects</h1>
+
+  </div>
+  <br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 1</h1>
+
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Subjects</h1><br>
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Subject</th>
+    </tr>
+{% for data in sem1 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.3}} </td>
+
+    </tr>
+{% endfor %}
+</table>
+<br>
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th>Attendance</th>
+    </tr>
+{% for data in stud1 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <td><a href="../mentor_view_attendance/{{data.10}}">View</a></td>
+
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 2</h1>
+
+</div>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Subjects</h1><br>
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Subject</th>
+    </tr>
+{% for data in sem2 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.3}} </td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+        <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th>Attendance</th>
+
+    </tr>
+{% for data in stud2 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <td><a href="../mentor_view_attendance/{{data.10}}">View</a></td>
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 3</h1>
+
+</div>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Subjects</h1><br>
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Subject</th>
+    </tr>
+{% for data in sem3 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.3}} </td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+        <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th>Attendance</th>
+
+    </tr>
+{% for data in stud3 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <td><a href="../mentor_view_attendance/{{data.10}}">View</a></td>
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 4</h1>
+
+</div>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Subjects</h1><br>
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Subject</th>
+    </tr>
+{% for data in sem4 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.3}} </td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+        <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th>Attendance</th>
+
+    </tr>
+{% for data in stud4 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <td><a href="../mentor_view_attendance/{{data.10}}">View</a></td>
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 5</h1>
+
+</div>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Subjects</h1><br>
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Subject</th>
+    </tr>
+{% for data in sem5 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.3}} </td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+        <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th>Attendance</th>
+
+    </tr>
+{% for data in stud5 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <td><a href="../mentor_view_attendance/{{data.10}}">View</a></td>
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 6</h1>
+
+</div>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Subjects</h1><br>
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Subject</th>
+    </tr>
+{% for data in sem6 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.3}} </td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+        <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th>Attendance</th>
+
+    </tr>
+{% for data in stud6 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <td><a href="../mentor_view_attendance/{{data.10}}">View</a></td>
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 7</h1>
+
+</div>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Subjects</h1><br>
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Subject</th>
+    </tr>
+{% for data in sem7 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.3}} </td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+        <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th>Attendance</th>
+
+    </tr>
+{% for data in stud7 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <td><a href="../mentor_view_attendance/{{data.10}}">View</a></td>
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 8</h1>
+
+</div>
+
+<div class=" col p-2  container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Subjects</h1><br>
+<table style="width:100%; color:black; text-align:left;" class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Subject</th>
+    </tr>
+{% for data in sem8 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.3}} </td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+        <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th>Attendance</th>
+
+    </tr>
+{% for data in stud8 %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <td><a href="../mentor_view_attendance/{{data.10}}">View</a></td>
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

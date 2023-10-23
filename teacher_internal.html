@@ -1,0 +1,351 @@
+{% extends 'teacher_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush; "><a href="../staff_view_course/{{did}}" >Back</a></div>
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Internal Marks</h1>
+
+  </div>
+  <br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 1</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th colspan="2" >Internal Marks</th>
+    </tr>
+{% for data in stud1 %}
+
+        <form action="../make_internal" method="post">
+            {% csrf_token %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <input type="hidden" value="{{data.10}}" name="roll_no">
+        <input type="hidden" value="{{data.7}}" name="cur_semester">
+        <input type="hidden" value="{{id}}" name="id">
+          <td>
+             <select  name="txtsemester"  required  style="opacity:0.6; width:150px; height:35px; float:left;">
+                  <option value="" selected>Select Subject</option>
+                {% for sub in sem1 %}
+                    <option value="{{sub.0}}" >{{sub.3}}</option>
+                {% endfor %}
+            </select><br><br>
+              <input type="number"  name="mark" style="opacity:0.6; width:150px; height:35px;" placeholder="Internal Mark" min="0" max="50"><br>
+              <input type="submit" value="Add Mark" >
+          </td>
+          <td><a href="../view_internal/{{data.0}}">View Internal</a></td>
+      </tr>
+   </form>
+
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 2</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th colspan="2" >Attendence</th>
+    </tr>
+{% for data in stud2 %}
+
+        <form action="../make_internal" method="post">
+            {% csrf_token %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <input type="hidden" value="{{data.10}}" name="roll_no">
+        <input type="hidden" value="{{data.7}}" name="cur_semester">
+        <input type="hidden" value="{{id}}" name="id">
+          <td>
+             <select  name="txtsemester"  required  style="opacity:0.6; width:150px; height:35px; float:left;">
+                  <option value="" selected>Select Subject</option>
+                {% for sub in sem2 %}
+                    <option value="{{sub.0}}" >{{sub.3}}</option>
+                {% endfor %}
+            </select><br><br>
+              <input type="number"  name="mark" style="opacity:0.6; width:150px; height:35px;" placeholder="Internal Mark" min="0" max="50"><br>
+              <input type="submit" value="Add Mark" >
+          </td>
+          <td><a href="../view_internal/{{data.0}}">View Internal</a></td>
+      </tr>
+   </form>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 3</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th colspan="2" >Attendence</th>
+    </tr>
+{% for data in stud3 %}
+
+        <form action="../make_internal" method="post">
+            {% csrf_token %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <input type="hidden" value="{{data.10}}" name="roll_no">
+        <input type="hidden" value="{{data.7}}" name="cur_semester">
+        <input type="hidden" value="{{id}}" name="id">
+          <td>
+             <select  name="txtsemester"  required  style="opacity:0.6; width:150px; height:35px; float:left;">
+                  <option value="" selected>Select Subject</option>
+                {% for sub in sem3 %}
+                    <option value="{{sub.0}}" >{{sub.3}}</option>
+                {% endfor %}
+            </select><br><br>
+              <input type="number"  name="mark" style="opacity:0.6; width:150px; height:35px;" placeholder="Internal Mark" min="0" max="50"><br>
+              <input type="submit" value="Add Mark" >
+          </td>
+          <td><a href="../view_internal/{{data.0}}">View Internal</a></td>
+      </tr>
+   </form>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 4</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th colspan="2" >Attendence</th>
+    </tr>
+{% for data in stud4 %}
+
+        <form action="../make_internal" method="post">
+            {% csrf_token %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <input type="hidden" value="{{data.10}}" name="roll_no">
+        <input type="hidden" value="{{data.7}}" name="cur_semester">
+        <input type="hidden" value="{{id}}" name="id">
+          <td>
+             <select  name="txtsemester"  required  style="opacity:0.6; width:150px; height:35px; float:left;">
+                  <option value="" selected>Select Subject</option>
+                {% for sub in sem4 %}
+                    <option value="{{sub.0}}" >{{sub.3}}</option>
+                {% endfor %}
+            </select><br><br>
+              <input type="number"  name="mark" style="opacity:0.6; width:150px; height:35px;" placeholder="Internal Mark" min="0" max="50"><br>
+              <input type="submit" value="Add Mark" >
+          </td>
+          <td><a href="../view_internal/{{data.0}}">View Internal</a></td>
+      </tr>
+   </form>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 5</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th colspan="2" >Attendence</th>
+    </tr>
+{% for data in stud5 %}
+
+        <form action="../make_internal" method="post">
+            {% csrf_token %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <input type="hidden" value="{{data.10}}" name="roll_no">
+        <input type="hidden" value="{{data.7}}" name="cur_semester">
+        <input type="hidden" value="{{id}}" name="id">
+          <td>
+             <select  name="txtsemester"  required  style="opacity:0.6; width:150px; height:35px; float:left;">
+                  <option value="" selected>Select Subject</option>
+                {% for sub in sem5 %}
+                    <option value="{{sub.0}}" >{{sub.3}}</option>
+                {% endfor %}
+            </select><br><br>
+              <input type="number"  name="mark" style="opacity:0.6; width:150px; height:35px;" placeholder="Internal Mark" min="0" max="50"><br>
+              <input type="submit" value="Add Mark" >
+          </td>
+          <td><a href="../view_internal/{{data.0}}">View Internal</a></td>
+      </tr>
+   </form>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 6</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th colspan="2" >Attendence</th>
+    </tr>
+{% for data in stud6 %}
+
+        <form action="../make_internal" method="post">
+            {% csrf_token %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <input type="hidden" value="{{data.10}}" name="roll_no">
+        <input type="hidden" value="{{data.7}}" name="cur_semester">
+        <input type="hidden" value="{{id}}" name="id">
+          <td>
+             <select  name="txtsemester"  required  style="opacity:0.6; width:150px; height:35px; float:left;">
+                  <option value="" selected>Select Subject</option>
+                {% for sub in sem6 %}
+                    <option value="{{sub.0}}" >{{sub.3}}</option>
+                {% endfor %}
+            </select><br><br>
+              <input type="number"  name="mark" style="opacity:0.6; width:150px; height:35px;" placeholder="Internal Mark" min="0" max="50"><br>
+              <input type="submit" value="Add Mark" >
+          </td>
+          <td><a href="../view_internal/{{data.0}}">View Internal</a></td>
+      </tr>
+   </form>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 7</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th colspan="2" >Attendence</th>
+    </tr>
+{% for data in stud7 %}
+
+        <form action="../make_internal" method="post">
+            {% csrf_token %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <input type="hidden" value="{{data.10}}" name="roll_no">
+        <input type="hidden" value="{{data.7}}" name="cur_semester">
+        <input type="hidden" value="{{id}}" name="id">
+          <td>
+             <select  name="txtsemester"  required  style="opacity:0.6; width:150px; height:35px; float:left;">
+                  <option value="" selected>Select Subject</option>
+                {% for sub in sem7 %}
+                    <option value="{{sub.0}}" >{{sub.3}}</option>
+                {% endfor %}
+            </select><br><br>
+              <input type="number"  name="mark" style="opacity:0.6; width:150px; height:35px;" placeholder="Internal Mark" min="0" max="50"><br>
+              <input type="submit" value="Add Mark" >
+          </td>
+          <td><a href="../view_internal/{{data.0}}">View Internal</a></td>
+      </tr>
+   </form>
+{% endfor %}
+</table>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester 8</h1>
+</div>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1>Students</h1>
+    <br>
+<table style="width:100%; color:black; text-align:left;"  class="table">
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Register Number</th>
+        <th>Student Name</th>
+        <th colspan="2" >Attendence</th>
+    </tr>
+{% for data in stud8 %}
+
+        <form action="../make_internal" method="post">
+            {% csrf_token %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.10}} </td>
+        <td> {{data.1}} </td>
+        <input type="hidden" value="{{data.10}}" name="roll_no">
+        <input type="hidden" value="{{data.7}}" name="cur_semester">
+        <input type="hidden" value="{{id}}" name="id">
+          <td>
+             <select  name="txtsemester"  required  style="opacity:0.6; width:150px; height:35px; float:left;">
+                  <option value="" selected>Select Subject</option>
+                {% for sub in sem8 %}
+                    <option value="{{sub.0}}" >{{sub.3}}</option>
+                {% endfor %}
+            </select><br><br>
+              <input type="number"  name="mark" style="opacity:0.6; width:150px; height:35px;" placeholder="Internal Mark" min="0" max="50"><br>
+              <input type="submit" value="Add Mark" >
+          </td>
+          <td><a href="../view_internal/{{data.0}}">View Internal</a></td>
+      </tr>
+   </form>
+{% endfor %}
+</table>
+</div>
+
+{% endblock %}

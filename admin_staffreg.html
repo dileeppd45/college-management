@@ -1,0 +1,100 @@
+{% extends 'admin_header.html' %}
+{% block content %}
+
+<style type="text/css">
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.center{
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+}
+</style>
+</head>
+
+<section>
+<br>
+<div class="col p-2  container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h3 style="color:white;">Register Staff</h3>
+</div>
+<br>
+<div class=" container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table">
+    <form action="../staff_register" method="post">
+      {% csrf_token %}
+    <tr>
+      <td>STAFF ID:</td>
+      <td><input type="text" style="opacity:0.6; width:250px; height:35px; " name="txtstaffid" required ></td>
+    </tr>
+    <tr>
+      <td>NAME:</td>
+      <td><input type="text" name="txtname"  style="opacity:0.6; width:250px; height:35px; "required ></td>
+    </tr>
+    <tr>
+      <td>ADDRESS:</td>
+      <td><textarea type="text" name="txtaddress" style="opacity:0.6; width:250px; " required ></textarea></td>
+    </tr>
+    <tr>
+      <td>PHONE NUMBER:</td>
+      <td><input type="text" name="txtphnum" style="opacity:0.6; width:250px; height:35px; " required pattern="[6-9]{1}[0-9]{9}" title="incorrect phone no" ></td>
+    </tr>
+    <tr>
+      <td>EMAIL:</td>
+      <td><input type="text" name="txtemail" style="opacity:0.6; width:250px; height:35px; " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></td>
+    </tr>
+      <tr>
+        <td>DEPARTMENT:</td>
+        <td><input type="text" name="txtdepartment" style="opacity:0.6; width:250px; height:35px; " required></td>
+      </tr>
+    <tr>
+      <td>STAFF TYPE:</td>
+      <td>
+        <select  name="txttype"  required  style="opacity:0.6; width:250px; height:35px; ">
+          <option value="" selected>Select Type..</option>
+          <option value="teacher" >Teacher</option>
+          <option value="Mentor">Mentor</option>
+          <option value="Manager">Manager</option>
+        </select>
+      </td>
+    </tr>
+      <tr>
+        <td>SEMESTER:</td>
+        <td><select  name="txtsemester"  required  style="opacity:0.6; width:250px; height:35px; ">
+          <option value="" selected>Select Semester</option>
+          <option value="1" >1</option>
+          <option value="2">2</option>
+          <option value="3" >3</option>
+          <option value="4">4</option>
+          <option value="5" >5</option>
+          <option value="6">6</option>
+          <option value="7" >7</option>
+          <option value="8">8</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td>QUALIFICATION:</td>
+        <td><input type="text", name="txtqualification" style="opacity:0.6; width:250px; height:35px; " required></td>
+      </tr>
+    <tr>
+      <td>PASSWORD:</td>
+      <td><input name="txtpassword" type="txtpassword" style="opacity:0.6; width:250px; height:35px; " required></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input name="Submit" type="submit" id="Submit" value="Register" ></td>
+    </tr>
+    </form>
+  </table>
+</div>
+</section>
+{% endblock %}

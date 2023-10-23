@@ -1,0 +1,167 @@
+{% load static %}
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>METS</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.center{
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+
+}
+
+a {
+    color: lavenderblush;
+    }
+.bg-info{
+    background-color: #5bd9cc;
+    }
+</style>
+
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="../mentor_home">
+            <h3>
+              METS(mentor)
+            </h3>
+            <span> college</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto" style="color:white; margin-top:37px;">
+              <li class="nav-item ">
+                <a class="nav-link" href="../mentor_home" >Home <span class="sr-only">(current)</span></a>
+              </li>
+                <a class="nav-link" href="../mentor_view_profile" style="color:white; margin-top:37px;">Profile</a>
+                <a class="nav-link" href="../mentor_view_department" style="color:white; margin-top:37px;">Departments</a>
+
+                <a class="nav-link" href="../mentor_view_cnotification" style="color:white; margin-top:37px;">College Notifications</a>
+                <a class="nav-link" href="../mentor_view_leaves" style="color:white; margin-top:37px;">Leaves</a>
+              <li class="nav-item ">
+                <a class="nav-link" href="#logout">Logout</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </nav>
+      </div>
+    </header>
+        <section class=" slider_section position-relative">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="detail-box">
+                    <div>
+                      <h1>
+                        METS COLLEGE
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+        <!-- end slider section -->
+  </div>
+     {% block content %}
+
+
+      {% endblock %}
+        <section id="logout">
+    <html>
+<head>
+
+    <script>
+
+        function disableBackButton() {
+            window.history.forward();
+        }
+
+    </script>
+</head>
+<body onunload="disableBackButton()" onload="disableBackButton()">
+<br>
+<br>
+<center>
+    <h5 style="color:red;"> Are You Sure Want To  <a href="../login" style="color:#ffeb3b;font-size:30px"><b><u>LogOut</u></b></a> </h5>
+</center>
+</body>
+</html>
+</section>
+
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2023 All Rights Reserved By
+      <a href="#">Mets</a>
+    </p>
+
+  </footer>
+
+
+  <footer class="container-fluid footer_section">
+
+      <p>
+        Distributed By
+        <a href="#">Mets</a>
+      </p>
+
+  </footer>
+
+  <!-- footer section -->
+
+  <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+
+</body>
+
+</html>

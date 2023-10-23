@@ -1,0 +1,51 @@
+{% extends 'student_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Apply Leave</h1>
+
+  </div>
+  <br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table class="table" style="color: lavenderblush;">
+        <tr><th colspan="2"><h3>Leave Form</h3></th></tr>
+
+        <form action="../sendleave" method="post">
+            {% csrf_token %}
+        <tr>
+            <th>Start Date:</th>
+            <td><input type="date" name="start_date" style="opacity:0.6; width:250px; height:35px; "></td>
+        </tr>
+            <tr>
+                <th>Number Of Days:</th>
+                <td><input type="number" min="1" name="count" placeholder="enter number of days" style="opacity:0.6; width:250px; height:35px; "></td>
+            </tr>
+            <tr>
+                <th>To Mentor:</th>
+                <td>
+                    <select  name="ment"  required  style="opacity:0.6; width:250px; height:35px; ">
+                      <option value="" selected>Select Mentor</option>
+                         {% for data in mentors %}
+                      <option value="{{data.0}}" >{{data.1}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Reason For:</th>
+                <td>
+                    <input type="text" name="reason" required placeholder="enter your reason" style="opacity:0.6; width:250px; height:35px; ">
+                </td>
+            </tr>
+        <tr>
+            <td></td>
+            <td ><input type="submit" value="Send" class="btn btn-success" ></td>
+        </tr>
+
+        </form>
+
+    </table>
+</div>
+{% endblock %}

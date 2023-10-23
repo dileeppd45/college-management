@@ -1,0 +1,34 @@
+{% extends 'manager_header.html' %}
+{% block content %}
+
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <H3>Viewing Department</H3>
+</div>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table">
+
+  <tr style="color:red;">
+    <th>Sl No.</th>
+    <th>Department</th>
+    <th>Course</th>
+  </tr>
+  {% for data in cdata %}
+    <tr>
+      <td>{{forloop.counter}}</td>
+      <td> {{data.1}} </td>
+      <td><a href="../manager_view_course/{{data.0}}">View</a></td>
+    </tr>
+{% endfor %}
+</table>
+
+</div>
+
+{% endblock %}
+
+
+
+
+

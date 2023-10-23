@@ -1,0 +1,26 @@
+
+
+{% extends 'admin_header.html' %}
+{% block content %}
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1 style="color:white;">regiser Course</h1>
+</div>
+<br><br><br><br>
+<div class=" container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <form action="../add_course/{{id}}" method="post">
+        {% csrf_token %}
+        <table class="table">
+           <tr>
+               <th>Course Name:</th>
+               <td><input type="text" name="name" style="opacity:0.6;"></td>
+           </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" value="Add"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+{% endblock %}

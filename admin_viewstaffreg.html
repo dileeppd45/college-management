@@ -1,0 +1,41 @@
+{% extends 'admin_header.html' %}
+{% block content %}
+<body>
+<br>
+<div class="col p-2  container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h3 style="color:white;">Viewing Staffs</h3>
+</div>
+<br>
+<div class="container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table  class="table">
+    <tr>
+      <td>ID:</td>
+      <td>NAME:</td>
+      <td >ADDRESS:</td>
+      <td >PHONE NUMBER: </td>
+      <td >EMAIL:</td>
+      <td >STAFF TYPE: </td>
+      <td>DEPARTMENT:</td>
+      <td>QUALIFICATION:</td>
+      <td>SEMESTER:</td>
+      <td>PASSWORD:</td>
+    </tr>
+{% for data in data %}
+    <tr>
+      <td>{{data.0}}</td>
+      <td>{{ data.1 }}</td>
+      <td>{{ data.2 }}</td>
+      <td>{{ data.3 }}</td>
+      <td>{{ data.4 }}</td>
+      <td>{{ data.5 }}</td>
+      <td>{{ data.6 }}</td>
+      <td>{{ data.7 }}</td>
+      <td>{{ data.9 }}</td>
+      <td>{{ data.8 }}</td>
+
+    </tr>
+{% endfor %}
+  </table>
+</div>
+</body>
+{% endblock %}

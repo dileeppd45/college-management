@@ -1,0 +1,34 @@
+{% extends 'admin_header.html' %}
+{% block content %}
+
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h3 style="color:white;"><b>Viewing Department</b></h3>
+</div>
+<br>
+<div class=" container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table style="width:100%; color:black; text-align:left;" class="table">
+
+    <tr style="color:red;">
+        <th>Sl No.</th>
+        <th>Department</th>
+        <th colspan="2">Course</th>
+        <th colspan="2">Edit</th>
+    </tr>
+{% for data in cdata %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td> {{data.1}} </td>
+
+      <td><a href="../view_course/{{data.0}}">View Course</a></td>
+      <td><a href="../reg_course/{{data.0}}">Add Course</a></td>
+      <td> <a href="#">Edit</a></td><!--../edit_department/{{data.0}}-->
+      <td> <a href="#">Remove</a></td><!--../delete_department/{{data.0}}-->
+
+
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

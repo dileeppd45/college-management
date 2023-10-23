@@ -1,0 +1,58 @@
+
+
+{% extends 'admin_header.html' %}
+{% block content %}
+
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1 style="color:white;">Upload Notification</h1>
+</div>
+<br>
+<div class=" container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table">
+<form action="../add_notification/{{id}}" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <tr>
+    <th>
+      <label  style="float:left; padding-left:15px;"><b>Details :</b></label>
+    </th>
+    <td>
+      <input type="text" id="details" name="details" placeholder="Notification Details" style="opacity:0.6; width:250px; height:35px; " required>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label   style="float:left; padding-left:15px;"><b>Semester :</b></label>
+    </th>
+    <td>
+      <select  name="txtsemester"  required  style="opacity:0.6; width:250px; height:35px; ">
+          <option value="" selected>Select Semester</option>
+          <option value="1" >1</option>
+          <option value="2">2</option>
+          <option value="3" >3</option>
+          <option value="4">4</option>
+          <option value="5" >5</option>
+          <option value="6">6</option>
+          <option value="7" >7</option>
+          <option value="8">8</option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label   style="float:left; padding-left:15px;"><b>Upload Notication File:</b></label>
+    </th>
+    <td>
+      <input type="file" name="pdf_file" id="pdf_file" accept="application/pdf" style="opacity:0.6; width:250px; height:35px; ">
+    </td>
+  </tr>
+  <tr>
+    <th></th>
+    <td>
+      <button type="submit">Upload</button>
+    </td>
+  </tr>
+</form>
+  </table>
+</div>
+{% endblock %}

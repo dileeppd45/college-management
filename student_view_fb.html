@@ -1,0 +1,36 @@
+{% extends 'student_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Viewing Feedbacks</h1>
+
+  </div>
+  <br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table class="table" style="color: lavenderblush;">
+      <tr>
+        <th colspan="3" style="text-align:left;"><h3>Your Feedbacks</h3></th>
+      </tr>
+        <tr style="color:red;">
+            <th>Send</th>
+            <th>Time</th>
+
+        </tr>
+            {% for data in feeds %}
+        <br>
+
+        <tr>
+            <td>{{data.2}}</td>
+            <td>{{data.3}}</td>
+
+        </tr>
+
+
+        <br>
+            {% endfor %}
+
+    </table>
+</div>
+{% endblock %}

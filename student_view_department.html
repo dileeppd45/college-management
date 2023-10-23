@@ -1,0 +1,30 @@
+{% extends 'student_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h3><b>Viewing Department</b></h3>
+</div>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table style="width:100%; color:black; text-align:left;" class="table">
+
+    <tr style="color:red;">
+
+        <th>Department</th>
+        <th colspan="2">Course</th>
+
+    </tr>
+
+    <tr>
+
+        <td> {{cdata.1}} </td>
+
+      <td><a href="../stud_view_course/{{cdata.0}}">View Course</a></td>
+
+
+
+    </tr>
+</table>
+</div>
+{% endblock %}

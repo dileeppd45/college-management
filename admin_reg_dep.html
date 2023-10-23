@@ -1,0 +1,26 @@
+{% extends 'admin_header.html' %}
+{% block content %}
+<br>
+<div class="col p-2  container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h3 style="color:white;">Regiser Department</h3>
+</div>
+<br>
+<div class=" container" style="background-color: #5bd9cc; color: lavenderblush;">
+
+        <table class="table">
+             <form action="../add_dep" method="post">
+                  {% csrf_token %}
+           <tr>
+               <th>Department Name:</th>
+               <td><input type="text" name="name"  style="opacity:0.6; width:250px; height:35px; "></td>
+           </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" value="Add"></td>
+            </tr>
+                  </form>
+        </table>
+
+</div>
+
+{% endblock %}

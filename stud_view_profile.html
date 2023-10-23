@@ -1,0 +1,51 @@
+{% extends 'student_header.html' %}
+{% block content %}
+<br>
+<br>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style=" color: lavenderblush; ">
+    <tr style="color:red;">
+      <th colspan="3">Your Profile</th>
+    </tr>
+    <tr>
+      <th>Register number:</th>
+      <td>{{profile.1}}</td>
+    </tr>
+    <tr>
+      <th>Name:</th>
+      <td>{{profile.2}}</td>
+    </tr>
+    <tr>
+      <th>Department:</th>
+      <td>{{profile.3}}</td>
+    </tr>
+    <tr>
+      <th>Course:</th>
+      <td>{{profile.4}}</td>
+    </tr>
+    <tr>
+      <th>Semester:</th>
+      <td>{{profile.5}}</td>
+    </tr>
+    <tr>
+      <th>Address:</th>
+      <td>{{profile.6}}</td>
+    </tr>
+    <tr>
+      <th>Phone:</th>
+      <td>{{profile.7}}</td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td>{{profile.8}}</td>
+    </tr>
+    <tr>
+      <th>Pincode:</th>
+      <td>{{profile.9}}</td>
+    </tr>
+
+  </table>
+  <a href="../change_password/{{profile.0}}" style="color:blue;">Change Password</a>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'mentor_header.html' %}
+{% block content %}
+
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush; "><a href="../mentor_view_course/{{did}}" >Back</a></div>
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>MG UNIVERSITY Notification</h1>
+
+  </div>
+  <br>
+
+
+{% for data in cdata %}
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <p style="float:right;">{{data.3}}</p>
+    <a href="../media/unotification/{{data.5}}" download>{{data.2}}</a>
+  </div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,44 @@
+
+{% extends 'admin_header.html' %}
+{% block content %}
+
+
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+    <h1 style="color:white;">Regiser Subject</h1>
+</div>
+<br>
+<div class=" container" style="background-color: #5bd9cc; color: lavenderblush;">
+
+
+        <table class="table">
+            <form action="../add_subject/{{id}}" method="post">
+                 {% csrf_token %}
+           <tr>
+               <th>Subject Name:</th>
+               <td><input type="text" name="name" style="opacity:0.6; "></td>
+           </tr>
+          <tr>
+        <th>SEMESTER:</th>
+        <td><select  name="semester"  required  style="opacity:0.6; ">
+          <option value="" selected>Select Semester</option>
+          <option value="1" >1</option>
+          <option value="2">2</option>
+          <option value="3" >3</option>
+          <option value="4">4</option>
+          <option value="5" >5</option>
+          <option value="6">6</option>
+          <option value="7" >7</option>
+          <option value="8">8</option>
+        </select>
+        </td>
+      </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" value="Add"></td>
+            </tr>
+                </form>
+        </table>
+
+</div>
+{% endblock %}

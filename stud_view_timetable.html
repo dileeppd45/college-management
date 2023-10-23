@@ -1,0 +1,79 @@
+{% extends 'student_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush; "><a href="../stud_view_course/{{did}}" >Back</a></div>
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Course Wise Timetable</h1>
+
+  </div>
+  <br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Semester {{sem}}</h1>
+
+</div>
+
+<div class="col p-5 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <table class="table" style=" color: lavenderblush;">
+    <tr  style="color:red;">
+      <th></th>
+      <th>Period 1</th>
+      <th>Period 2</th>
+      <th>Period 3</th>
+      <th>Period 4</th>
+      <th>Period 5</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Monday</th>
+      <th>{{semmon.0}}</th>
+      <th>{{semmon.2}}</th>
+      <th>{{semmon.4}}</th>
+      <th>{{semmon.6}}</th>
+      <th>{{semmon.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Tuesday</th>
+      <th>{{semtue.0}}</th>
+      <th>{{semtue.2}}</th>
+      <th>{{semtue.4}}</th>
+      <th>{{semtue.6}}</th>
+      <th>{{semtue.8}}</th>
+    </tr>
+    <tr>
+      <th  style="color:red;">Wednesday</th>
+      <th>{{semwed.0}}</th>
+      <th>{{semwed.2}}</th>
+      <th>{{semwed.4}}</th>
+      <th>{{semwed.6}}</th>
+      <th>{{semwed.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Thursday</th>
+      <th>{{semthu.0}}</th>
+      <th>{{semthu.2}}</th>
+      <th>{{semthu.4}}</th>
+      <th>{{semthu.6}}</th>
+      <th>{{semthu.8}}</th>
+    </tr>
+    <tr>
+      <th style="color:red;">Friday</th>
+      <th>{{semfri.0}}</th>
+      <th>{{semfri.2}}</th>
+      <th>{{semfri.4}}</th>
+      <th>{{semfri.6}}</th>
+      <th>{{semfri.8}}</th>
+    </tr>
+
+  </table>
+</div>
+
+
+
+
+</div>
+
+
+{% endblock %}

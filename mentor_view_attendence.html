@@ -1,0 +1,36 @@
+{% extends 'mentor_header.html' %}
+{% block content %}
+<br>
+<br>
+<div class="col p-2 container" style="background-color: #5bd9cc; color: lavenderblush; "><a href="../mentor_view_semester/{{cid}}" >Back</a></div>
+
+<br>
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+  <h1>Attendence Details</h1>
+
+  </div>
+  <br>
+
+<div class=" col p-2 container" style="background-color: #5bd9cc; color: lavenderblush;">
+<table class="table">
+  <tr>
+    <th>Sl No</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Added By</th>
+
+  </tr>
+  {% for data in attendence %}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td> {{data.2}} </td>
+    <td> {{data.5}} </td>
+    <td> {{data.3}} </td>
+
+  </tr>
+  {% endfor %}
+</table>
+  <H4>Total Absence={{total}}</H4>
+</div>
+
+{% endblock %}
